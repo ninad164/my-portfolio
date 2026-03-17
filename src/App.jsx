@@ -31,7 +31,7 @@ export default function RoboticsPortfolio() {
   ];
 
   const skills = [
-    "ROS / ROS 2",
+    "ROS/ROS2",
     "Python",
     "C++",
     "MATLAB",
@@ -61,13 +61,11 @@ export default function RoboticsPortfolio() {
                 Ninad Alurkar
               </h1>
               <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-                Robotics engineer focused on perception, intelligent autonomous systems,
-                and human-centered robot design.
+                Robotics Engineer focused on Perception, Mobile Robots, and Human-Robot Interaction
               </p>
               <p className="mt-6 max-w-2xl text-base leading-7 text-slate-400">
-                I build robotics systems that combine sensing, interaction, and autonomy—
-                from emotion-aware companion robots to ROS-based simulation, localization,
-                and perception-driven robotic workflows.
+                I build robotics systems using ROS, simulation, localization, computer vision, 
+                and multimodal sensing, with a focus on perception-driven autonomy.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
