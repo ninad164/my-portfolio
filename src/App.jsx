@@ -23,7 +23,7 @@ export default function RoboticsPortfolio() {
         "Developed a ROS2-based safety monitoring system for real-time sensor validation and anomaly detection. Designed node-based architecture for monitoring sensor health and triggering alerts for abnormal conditions.",
       tech: ["ROS2", "Sensor Monitoring", "C++"],
       link: "https://github.com/ninad164/sensor-guard-ros2",
-    }
+    },
     {
       title: "Autonomous Manipulation of a robotic arm for toasting bread",
       subtitle: "Perception + Planning",
