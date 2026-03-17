@@ -1,3 +1,5 @@
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
 export default function RoboticsPortfolio() {
   const projects = [
     {
@@ -267,6 +269,7 @@ export default function RoboticsPortfolio() {
           </div>
         </div>
       </section>
+      <SpeedInsights />
     </div>
   );
 }
