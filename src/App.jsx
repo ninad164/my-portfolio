@@ -36,16 +36,15 @@ export default function RoboticsPortfolio() {
     "C++",
     "MATLAB",
     "Gazebo",
+    "MuJoCo",
     "OpenCV",
     "Computer Vision",
     "Perception",
     "Localization",
     "Sensor Fusion",
     "Human-Robot Interaction",
-    "Experimental Evaluation",
-    "Jetson",
-    "WSL2",
-    "Git / GitHub",
+    "CUDA",
+    "WSL2"
   ];
 
   return (
@@ -76,6 +75,14 @@ export default function RoboticsPortfolio() {
                   View Projects
                 </a>
                 <a
+                  href="/Resume.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-2xl border border-slate-700 px-5 py-3 font-medium text-white transition hover:border-slate-500 hover:bg-slate-900"
+                >
+                  View Resume
+                </a>
+                <a
                   href="#contact"
                   className="rounded-2xl border border-slate-700 px-5 py-3 font-medium text-white transition hover:border-slate-500 hover:bg-slate-900"
                 >
@@ -89,7 +96,7 @@ export default function RoboticsPortfolio() {
                 <div>
                   <p className="text-sm uppercase tracking-[0.2em] text-slate-500">Current Focus</p>
                   <p className="mt-2 text-lg font-semibold text-white">
-                    Trust, perception, and adaptive human-robot interaction
+                    Perception, SLAM, Adaptive Human-Robot Interaction
                   </p>
                 </div>
                 <div>
@@ -102,7 +109,7 @@ export default function RoboticsPortfolio() {
                 <div>
                   <p className="text-sm uppercase tracking-[0.2em] text-slate-500">Looking For</p>
                   <p className="mt-2 text-slate-300">
-                    Robotics, perception, autonomy, and human-centered engineering roles.
+                    Robotics, perception, autonomy, machine learning, and human-centered engineering roles.
                   </p>
                 </div>
               </div>
@@ -198,7 +205,7 @@ export default function RoboticsPortfolio() {
           </h2>
           <p className="mt-4 max-w-2xl leading-8 text-slate-300">
             I am interested in opportunities in robotics, perception, autonomy, and
-            human-robot interaction. Reach out for collaborations, roles, or technical discussions.
+            human-robot interaction. Reach out to me here!
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
