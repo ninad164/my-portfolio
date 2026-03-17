@@ -1,50 +1,70 @@
 export default function RoboticsPortfolio() {
   const projects = [
     {
-      title: "Trust-Based Companion Robot",
-      subtitle: "Master's Thesis Project",
+      title: "Measuring Trust in Human–Robot Interaction",
+      subtitle: "Master’s Thesis Project",
       description:
-        "Designed and evaluated a multimodal conversational robot that uses facial and speech-based emotion recognition to study trust, adaptability, and perceived interaction quality in human-robot interaction.",
-      tech: ["Human-Robot Interaction", "Emotion Recognition", "Experimental Design", "Data Analysis"],
+        "Built a multimodal companion robot, capable of recognising human emotions(voice and face), using ROS on Clearpath JACKAL with OAK-D Pro and ReSpeaker. Conducted IRB-approved study (60 participants) analyzing trust using statistical metrics.",
+      tech: ["ROS", "JACKAL", "OAK-D", "ReSpeaker", "HRI"],
+      link: "https://github.com/ninad164/buddy-emotion-recognition"
     },
     {
-      title: "Jackal-Based Interactive Robot",
-      subtitle: "Perception + HRI System",
+      title: "RL–Based Navigation Controller in MuJoCo Simulation",
+      subtitle: "Autonomous Navigation",
       description:
-        "Built a companion robot concept on the Jackal platform using Luxonis OAK-D and ReSpeaker Mic Array for multimodal emotion sensing, responsive interaction, and social communication.",
-      tech: ["ROS", "Jackal", "OAK-D", "ReSpeaker", "Perception"],
+        "Developed a mobile-robot autonomy environment in MuJoCo and trained a PPO controller, improving task success from 28% to 71% compared to baseline rule-based controller. Reduced time-to-goal by 62% (8.7s → 3.3s) vs rule-based baseline.",
+      tech: ["MuJoCo Sim", "RL(PPO)"],
+      link: "https://github.com/ninad164/mujoco-rl-navigation",
     },
     {
-      title: "Multi-Robot Toasting Simulation",
-      subtitle: "ROS + Gazebo Coordination",
+      title: "Sensor Guard – ROS2 Safety Monitoring System",
+      subtitle: "ROS2 + Real-Time Monitoring",
       description:
-        "Developed a Gazebo-based multi-robot workflow where robotic arms coordinate with visual feedback to pick, place, flip, and transfer bread slices during a simulated toasting task.",
-      tech: ["ROS", "Gazebo", "Manipulation", "Computer Vision", "Coordination"],
+        "Developed a ROS2-based safety monitoring system for real-time sensor validation and anomaly detection. Designed node-based architecture for monitoring sensor health and triggering alerts for abnormal conditions.",
+      tech: ["ROS2", "Sensor Monitoring", "C++"],
+      link: "https://github.com/ninad164/sensor-guard-ros2",
+    }
+    {
+      title: "Autonomous Manipulation of a robotic arm for toasting bread",
+      subtitle: "Perception + Planning",
+      description:
+        "Designed a perception–planning–control pipeline using OpenCV in ROS/Gazebo, reducing manual task time by 7 minutes.",
+      tech: ["ROS1", "Gazebo", "OpenCV", "MoveIt"],
     },
     {
-      title: "EKF Localization in ROS 2",
-      subtitle: "State Estimation Project",
+      title: "ML-Based Ridge Regression (L2) Strategy",
+      subtitle: "Time-Series Prediction",
       description:
-        "Implemented Extended Kalman Filter localization grounded in probabilistic robotics principles, with emphasis on efficient prediction-update structure and practical robot state estimation.",
-      tech: ["ROS 2", "EKF", "Localization", "C++", "Probabilistic Robotics"],
+        "Designed a rolling-window Ridge Regression pipeline that reduced out-of-sample error by 15% and improved robustness under covariate shift.",
+      tech: ["Python", "Machine Learning", "L2 Regularization"],
+      link: "https://github.com/ninad164/quant-global-momentum"
+    },
+    {
+      title: "Temporal Prediction: LSTM vs Transformer",
+      subtitle: "Deep Learning",
+      description:
+        "Built GPU-accelerated forecasting pipelines in PyTorch and TensorFlow, benchmarking models using RMSE and MAE across varying volatility regimes.",
+      tech: ["PyTorch", "TensorFlow", "LSTM", "Transformer"],
+      link: "https://github.com/ninad164/Stock-prediction"
     },
   ];
 
   const skills = [
     "ROS/ROS2",
     "Python",
+    "PyTorch",
+    "TensorFlow",
     "C++",
     "MATLAB",
     "Gazebo",
     "MuJoCo",
     "OpenCV",
-    "Computer Vision",
+    "MoveIt",
     "Perception",
-    "Localization",
+    "SLAM",
     "Sensor Fusion",
-    "Human-Robot Interaction",
     "CUDA",
-    "WSL2"
+    "Reinforcement Learning"
   ];
 
   return (
@@ -169,6 +189,16 @@ export default function RoboticsPortfolio() {
                   </span>
                 ))}
               </div>
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-block text-cyan-300 hover:underline"
+                >
+                  View Project →
+                </a>
+              )}
             </div>
           ))}
         </div>
