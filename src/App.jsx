@@ -6,7 +6,7 @@ export default function RoboticsPortfolio() {
       description:
         "Built a multimodal companion robot, capable of recognising human emotions(voice and face), using ROS on Clearpath JACKAL with OAK-D Pro and ReSpeaker. Conducted IRB-approved study (60 participants) analyzing trust using statistical metrics.",
       tech: ["ROS", "JACKAL", "OAK-D", "ReSpeaker", "HRI"],
-      link: "https://github.com/ninad164/buddy-emotion-recognition"
+      link: "https://github.com/ninad164/buddy-emotion-recognition",
       thesisPdf: "/thesis.pdf"
     },
     {
