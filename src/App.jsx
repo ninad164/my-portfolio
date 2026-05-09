@@ -7,6 +7,7 @@ export default function RoboticsPortfolio() {
         "Built a multimodal companion robot, capable of recognising human emotions(voice and face), using ROS on Clearpath JACKAL with OAK-D Pro and ReSpeaker. Conducted IRB-approved study (60 participants) analyzing trust using statistical metrics.",
       tech: ["ROS", "JACKAL", "OAK-D", "ReSpeaker", "HRI"],
       link: "https://github.com/ninad164/buddy-emotion-recognition"
+      thesisPdf: "/thesis.pdf"
     },
     {
       title: "RL–Based Navigation Controller in MuJoCo Simulation",
@@ -197,6 +198,16 @@ export default function RoboticsPortfolio() {
                   className="mt-4 inline-block text-cyan-300 hover:underline"
                 >
                   View Project →
+                </a>
+              )}
+              {project.thesisPdf && (
+                <a
+                  href={project.thesisPdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="thesis-link"
+                >
+                  Read Thesis
                 </a>
               )}
             </div>
