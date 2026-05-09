@@ -171,50 +171,50 @@ export default function RoboticsPortfolio() {
           </h2>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {projects.map((project) => (
-            <div
-              key={project.title}
-              className="rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-xl shadow-black/20 transition hover:-translate-y-1 hover:border-slate-700"
-            >
-              <p className="text-sm font-medium text-cyan-300">{project.subtitle}</p>
-              <h3 className="mt-2 text-2xl font-semibold text-white">{project.title}</h3>
-              <p className="mt-4 leading-7 text-slate-300">{project.description}</p>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {project.tech.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-slate-700 bg-slate-950 px-3 py-1 text-sm text-slate-300"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-              {project.link && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-4 inline-block text-cyan-300 hover:underline"
-                >
-                  View Project →
-                </a>
-              )}
-              {project.thesisPdf && (
-                <a
-                  href={project.thesisPdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="thesis-link"
-                >
-                  Read Thesis
-                </a>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
+     <div className="grid gap-6 md:grid-cols-2">
+      {projects.map((project) => (
+        <div
+          key={project.title}
+          className="rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-xl shadow-black/20 transition hover:-translate-y-1 hover:border-slate-700"
+        >
+          <p className="text-sm font-medium text-cyan-300">
+            {project.subtitle}
+          </p>
 
+          <h3 className="mt-2 text-2xl font-semibold text-white">
+            {project.title}
+          </h3>
+
+          <p className="mt-4 leading-7 text-slate-300">
+            {project.description}
+          </p>
+
+          <div className="flex gap-4 mt-6">
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 rounded-lg border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-300"
+            >
+              View Project
+            </a>
+
+            {project.thesisPdf && (
+              <a
+                href={project.thesisPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-lg border border-white/20 text-white hover:border-white hover:bg-white hover:text-black transition-all duration-300"
+              >
+                Read Thesis
+              </a>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+  
       <section id="skills" className="mx-auto max-w-6xl px-6 py-16 md:px-10">
         <div className="rounded-3xl border border-slate-800 bg-slate-900 p-8 shadow-xl shadow-black/20">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
