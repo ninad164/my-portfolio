@@ -26,6 +26,14 @@ export default function RoboticsPortfolio() {
       link: "https://github.com/ninad164/sensor-guard-ros2",
     },
     {
+      title: "ROS2 Autonomous Robotics System",
+      subtitle: "ROS2 + Autonomous Systems",
+      description:
+        "Built and shared a ROS2 robotics project focused on autonomous-system development, highlighting modular robot software, sensor-driven behavior, and practical robotics integration.",
+      tech: ["ROS2", "Robotics", "Autonomous Systems"],
+      link: "https://www.linkedin.com/posts/ninadalurkar_ros2-robotics-autonomoussystems-share-7463675145509933057-P4f8",
+    },
+    {
       title: "Autonomous Manipulation of a robotic arm for toasting bread",
       subtitle: "Perception + Planning",
       description:
@@ -189,15 +197,28 @@ export default function RoboticsPortfolio() {
             {project.description}
           </p>
 
+          <div className="mt-5 flex flex-wrap gap-2">
+            {project.tech.map((tech) => (
+              <span
+                key={tech}
+                className="rounded-full border border-slate-700 bg-slate-950/50 px-3 py-1 text-xs font-medium text-slate-300"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
           <div className="flex gap-4 mt-6">
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-lg border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-300"
-            >
-              View Project
-            </a>
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-lg border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-300"
+              >
+                View Project
+              </a>
+            )}
 
             {project.thesisPdf && (
               <a
