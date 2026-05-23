@@ -26,12 +26,14 @@ export default function RoboticsPortfolio() {
       link: "https://github.com/ninad164/sensor-guard-ros2",
     },
     {
-      title: "ROS2 Autonomous Robotics System",
-      subtitle: "ROS2 + Autonomous Systems",
+      title: "ROS2 PCL Perception Suite",
+      subtitle: "Real-Time Point Cloud Perception Pipeline using ROS 2 and PCL",
       description:
-        "Built and shared a ROS2 robotics project focused on autonomous-system development, highlighting modular robot software, sensor-driven behavior, and practical robotics integration.",
-      tech: ["ROS2", "Robotics", "Autonomous Systems"],
-      link: "https://www.linkedin.com/posts/ninadalurkar_ros2-robotics-autonomoussystems-share-7463675145509933057-P4f8",
+        "Built a modular ROS 2 Humble pipeline with a synthetic PointCloud2 publisher, preprocessing, ground segmentation, Euclidean clustering, RViz2 bounding boxes, centroid tracking, persistent IDs, metrics logging, YAML configuration, and unified launch.",
+      tech: ["ROS 2 Humble", "C++", "Python", "PCL", "RViz2", "Ubuntu 22.04"],
+      link: "https://github.com/ninad164/ros2-pcl-perception-suite",
+      thumbnail: "/projects/ros2-pcl-perception-suite-thumbnail.svg",
+      preview: "/projects/ros2-pcl-perception-suite-preview.svg",
     },
     {
       title: "Autonomous Manipulation of a robotic arm for toasting bread",
@@ -183,8 +185,29 @@ export default function RoboticsPortfolio() {
       {projects.map((project) => (
         <div
           key={project.title}
-          className="rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-xl shadow-black/20 transition hover:-translate-y-1 hover:border-slate-700"
+          className="group rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-xl shadow-black/20 transition hover:-translate-y-1 hover:border-slate-700"
         >
+          {project.thumbnail && (
+            <div className="mb-5 overflow-hidden rounded-2xl border border-slate-800 bg-slate-950">
+              <div className="relative aspect-video">
+                <img
+                  src={project.thumbnail}
+                  alt={`${project.title} thumbnail`}
+                  className={`absolute inset-0 h-full w-full object-cover transition duration-300 ${
+                    project.preview ? "group-hover:opacity-0" : ""
+                  }`}
+                />
+                {project.preview && (
+                  <img
+                    src={project.preview}
+                    alt={`${project.title} preview`}
+                    className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-300 group-hover:opacity-100"
+                  />
+                )}
+              </div>
+            </div>
+          )}
+
           <p className="text-sm font-medium text-cyan-300">
             {project.subtitle}
           </p>

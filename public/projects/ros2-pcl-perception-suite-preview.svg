@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">ROS2 PCL Perception Suite hover preview placeholder</title>
+  <desc id="desc">Stylized hover preview placeholder showing performance metrics and tracked point cloud clusters.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#030712"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <g stroke="#334155" stroke-width="1">
+    <path d="M90 560h720M90 500h720M90 440h720M90 380h720M90 320h720"/>
+    <path d="M160 300v280M270 300v280M380 300v280M490 300v280M600 300v280M710 300v280"/>
+  </g>
+  <polyline points="95,535 190,510 285,520 380,470 475,450 570,405 665,430 760,365 810,350" fill="none" stroke="#22d3ee" stroke-width="5"/>
+  <polyline points="95,500 190,475 285,480 380,448 475,420 570,390 665,395 760,355 810,342" fill="none" stroke="#a3e635" stroke-width="4"/>
+  <g fill="#22d3ee">
+    <circle cx="928" cy="274" r="7"/>
+    <circle cx="962" cy="238" r="6"/>
+    <circle cx="998" cy="292" r="7"/>
+    <circle cx="1040" cy="250" r="6"/>
+  </g>
+  <g fill="#facc15">
+    <circle cx="930" cy="430" r="7"/>
+    <circle cx="970" cy="392" r="6"/>
+    <circle cx="1012" cy="448" r="7"/>
+    <circle cx="1058" cy="404" r="6"/>
+  </g>
+  <g fill="none" stroke-width="3">
+    <rect x="895" y="215" width="180" height="105" rx="10" stroke="#22d3ee"/>
+    <rect x="900" y="372" width="190" height="105" rx="10" stroke="#facc15"/>
+  </g>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text x="72" y="96" fill="#67e8f9" font-size="28" font-weight="700">Runtime Metrics Preview</text>
+    <text x="72" y="134" fill="#cbd5e1" font-size="20">Frame timing, cluster counts, and persistent track IDs</text>
+    <text x="96" y="626" fill="#94a3b8" font-size="18">Replace with RViz clustering GIF or metrics screenshot</text>
+    <text x="920" y="200" fill="#cbd5e1" font-size="18">track_id: 12</text>
+    <text x="925" y="358" fill="#cbd5e1" font-size="18">track_id: 18</text>
+  </g>
+</svg>
