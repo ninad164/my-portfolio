@@ -75,22 +75,27 @@ export default function RoboticsPortfolio() {
     },
   ];
 
-  const skills = [
-    "ROS/ROS2",
-    "Python",
-    "PyTorch",
-    "TensorFlow",
-    "C++",
-    "MATLAB",
-    "Gazebo",
-    "MuJoCo",
-    "OpenCV",
-    "MoveIt",
-    "Perception",
-    "SLAM",
-    "Sensor Fusion",
-    "CUDA",
-    "Reinforcement Learning"
+  const skillGroups = [
+    {
+      title: "Robotics",
+      skills: ["ROS", "ROS 2", "Gazebo", "RViz", "MuJoCo", "MoveIt 2"],
+    },
+    {
+      title: "Autonomy & Estimation",
+      skills: ["Navigation", "Sensor Fusion", "EKF", "Localization", "Motion Control", "PCL"],
+    },
+    {
+      title: "AI/ML",
+      skills: ["Reinforcement Learning", "PPO", "Computer Vision", "Emotion Recognition", "LLM-based Interaction"],
+    },
+    {
+      title: "Programming",
+      skills: ["Python", "C++", "MATLAB", "Git", "Linux"],
+    },
+    {
+      title: "Hardware / Sensors",
+      skills: ["Clearpath JACKAL", "OAK-D Pro", "ReSpeaker Mic Array"],
+    },
   ];
 
   return (
@@ -100,17 +105,17 @@ export default function RoboticsPortfolio() {
           <div className="grid gap-10 md:grid-cols-[1.3fr_0.7fr] md:items-center">
             <div>
               <p className="mb-4 inline-block rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1 text-sm tracking-wide text-cyan-300">
-                Robotics • Perception • Human-Robot Interaction
+                Robotics Software • Autonomy • AI Robotics
               </p>
               <h1 className="text-4xl font-bold tracking-tight text-white md:text-6xl">
                 Ninad Alurkar
               </h1>
               <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-                Robotics Engineer focused on Perception, Mobile Robots, and Human-Robot Interaction
+                Robotics Engineer focused on autonomous systems, robot perception, reinforcement learning, and human-robot interaction.
               </p>
               <p className="mt-6 max-w-2xl text-base leading-7 text-slate-400">
-                I build robotics systems using ROS, simulation, localization, computer vision, 
-                and multimodal sensing, with a focus on perception-driven autonomy.
+                I build ROS and ROS 2 software for perception-driven autonomy, sensor fusion,
+                probabilistic localization, simulation, and intelligent robot behavior.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -142,20 +147,20 @@ export default function RoboticsPortfolio() {
                 <div>
                   <p className="text-sm uppercase tracking-[0.2em] text-slate-500">Current Focus</p>
                   <p className="mt-2 text-lg font-semibold text-white">
-                    Perception, SLAM, Adaptive Human-Robot Interaction
+                    Autonomous navigation, perception, and AI-enabled robotics
                   </p>
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-[0.2em] text-slate-500">Background</p>
                   <p className="mt-2 text-slate-300">
-                    Master's graduate with hands-on experience in ROS, simulation, localization,
-                    emotion-aware interaction systems, and robotics prototyping.
+                    Master's graduate with hands-on experience across ROS/ROS 2,
+                    MuJoCo and Gazebo simulation, localization, perception, and HRI systems.
                   </p>
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-[0.2em] text-slate-500">Looking For</p>
                   <p className="mt-2 text-slate-300">
-                    Robotics, perception, autonomy, machine learning, and human-centered engineering roles.
+                    Robotics software, autonomy, AI robotics, and research engineering roles.
                   </p>
                 </div>
               </div>
@@ -171,16 +176,15 @@ export default function RoboticsPortfolio() {
               About
             </p>
             <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
-              Building practical robotics systems with a human-centered lens
+              Building robotics software for perception, autonomy, and interaction
             </h2>
           </div>
           <div className="rounded-3xl border border-slate-800 bg-slate-900 p-6 text-slate-300 shadow-xl shadow-black/20">
             <p className="leading-8">
-              My work sits at the intersection of robotics perception, interaction, and
-              autonomy. I am especially interested in systems that sense human state,
-              interpret context, and adapt behavior in meaningful ways. My recent work
-              includes trust-aware companion robot design, multimodal emotion recognition,
-              ROS-based simulation, and state estimation using probabilistic methods.
+              I build robotics software that connects perception, planning, state estimation,
+              and intelligent interaction. My work spans ROS/ROS 2 systems, simulation-based
+              autonomy, reinforcement learning navigation, probabilistic localization, sensor
+              fusion, and multimodal human-robot interaction.
             </p>
           </div>
         </div>
@@ -302,16 +306,25 @@ export default function RoboticsPortfolio() {
             Skills
           </p>
           <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
-            Technical Stack
+            Robotics Software Stack
           </h2>
-          <div className="mt-8 flex flex-wrap gap-3">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-2xl border border-slate-700 px-4 py-2 text-sm text-slate-200"
-              >
-                {skill}
-              </span>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {skillGroups.map((group) => (
+              <div key={group.title}>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
+                  {group.title}
+                </h3>
+                <div className="mt-3 flex flex-wrap gap-3">
+                  {group.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-2xl border border-slate-700 px-4 py-2 text-sm text-slate-200"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -323,11 +336,12 @@ export default function RoboticsPortfolio() {
             Contact
           </p>
           <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
-            Let's connect
+            Let&apos;s connect
           </h2>
           <p className="mt-4 max-w-2xl leading-8 text-slate-300">
-            I am interested in opportunities in robotics, perception, autonomy, and
-            human-robot interaction. Reach out to me here!
+            I am open to robotics software, AI robotics, autonomy, and research engineering
+            opportunities. Recruiters and robotics teams can reach me through email,
+            LinkedIn, or GitHub.
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
