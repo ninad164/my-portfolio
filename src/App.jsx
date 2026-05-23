@@ -32,8 +32,9 @@ export default function RoboticsPortfolio() {
         "Built a modular ROS 2 Humble pipeline with a synthetic PointCloud2 publisher, preprocessing, ground segmentation, Euclidean clustering, RViz2 bounding boxes, centroid tracking, persistent IDs, metrics logging, YAML configuration, and unified launch.",
       tech: ["ROS 2 Humble", "C++", "Python", "PCL", "RViz2", "Ubuntu 22.04"],
       link: "https://github.com/ninad164/ros2-pcl-perception-suite",
-      thumbnail: "/projects/ros2-pcl-perception-suite-thumbnail.svg",
-      preview: "/projects/ros2-pcl-perception-suite-preview.svg",
+      thumbnail: "/projects/ros2-pcl-perception-suite-thumbnail.png",
+      preview: "/projects/ros2-pcl-perception-suite-preview.gif",
+      metricsImage: "/projects/ros2-pcl-perception-suite-metrics.png",
     },
     {
       title: "Autonomous Manipulation of a robotic arm for toasting bread",
