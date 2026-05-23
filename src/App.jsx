@@ -10,12 +10,15 @@ export default function RoboticsPortfolio() {
       thesisPdf: "/thesis.pdf"
     },
     {
-      title: "RL–Based Navigation Controller in MuJoCo Simulation",
-      subtitle: "Autonomous Navigation",
+      title: "MuJoCo PPO Navigation Controller",
+      subtitle: "Reinforcement Learning for Obstacle-Aware Autonomous Navigation",
       description:
-        "Developed a mobile-robot autonomy environment in MuJoCo and trained a PPO controller, improving task success from 28% to 71% compared to baseline rule-based controller. Reduced time-to-goal by 62% (8.7s → 3.3s) vs rule-based baseline.",
-      tech: ["MuJoCo Sim", "RL(PPO)"],
+        "Built a custom MuJoCo/Gymnasium mobile-robot navigation environment with LiDAR-style ray observations, trained a PPO policy using Stable-Baselines3, and benchmarked it against a reactive baseline controller across success rate, collision rate, and time-to-goal metrics.",
+      tech: ["MuJoCo", "Reinforcement Learning", "PPO", "Gymnasium", "Stable-Baselines3", "Python", "Autonomous Navigation"],
       link: "https://github.com/ninad164/mujoco-rl-navigation",
+      thumbnail: "/project-images/mujoco-rl-navigation-thumbnail.jpg",
+      previewVideo: "/project-images/mujoco-rl-baseline-vs-ppo.mp4",
+      demoLink: "/project-images/mujoco-rl-baseline-vs-ppo.mp4",
     },
     {
       title: "Sensor Guard – ROS2 Safety Monitoring System",
