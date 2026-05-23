@@ -37,6 +37,17 @@ export default function RoboticsPortfolio() {
       metricsImage: "/projects/ros2-pcl-perception-suite-metrics.png",
     },
     {
+      title: "ROS 2 EKF Localization System",
+      subtitle: "Extended Kalman Filter State Estimation for Mobile Robots",
+      description:
+        "Implemented EKF-based localization from scratch in C++ for real-time sensor fusion between wheel odometry and simulated noisy GPS, publishing a filtered `/ekf/odom` estimate for TurtleBot3 in Gazebo.",
+      tech: ["ROS 2 Humble", "C++", "EKF", "State Estimation", "Sensor Fusion", "Gazebo"],
+      link: "https://github.com/ninad164/ros2-ekf-localization",
+      thumbnail: "/project-images/ekf-trajectory-comparison.png",
+      previewVideo: "/project-images/ekf-line-demo.mp4",
+      demoLink: "/project-images/ekf-line-demo.mp4",
+    },
+    {
       title: "Autonomous Manipulation of a robotic arm for toasting bread",
       subtitle: "Perception + Planning",
       description:
@@ -195,7 +206,7 @@ export default function RoboticsPortfolio() {
                   src={project.thumbnail}
                   alt={`${project.title} thumbnail`}
                   className={`absolute inset-0 h-full w-full object-cover transition duration-300 ${
-                    project.preview ? "group-hover:opacity-0" : ""
+                    project.preview || project.previewVideo ? "group-hover:opacity-0" : ""
                   }`}
                 />
                 {project.preview && (
@@ -203,6 +214,17 @@ export default function RoboticsPortfolio() {
                     src={project.preview}
                     alt={`${project.title} preview`}
                     className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-300 group-hover:opacity-100"
+                  />
+                )}
+                {project.previewVideo && (
+                  <video
+                    src={project.previewVideo}
+                    className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-300 group-hover:opacity-100"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
                   />
                 )}
               </div>
@@ -252,6 +274,17 @@ export default function RoboticsPortfolio() {
                 className="px-4 py-2 rounded-lg border border-white/20 text-white hover:border-white hover:bg-white hover:text-black transition-all duration-300"
               >
                 Read Thesis
+              </a>
+            )}
+
+            {project.demoLink && (
+              <a
+                href={project.demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-lg border border-white/20 text-white hover:border-white hover:bg-white hover:text-black transition-all duration-300"
+              >
+                Demo / Results
               </a>
             )}
           </div>
