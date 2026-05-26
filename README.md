@@ -1,85 +1,78 @@
-# Ninad Alurkar
+# Ninad Alurkar Portfolio
 
-Robotics Engineer focused on autonomous systems, robot perception, reinforcement learning, and human-robot interaction.
+Personal portfolio website for presenting robotics software, autonomy, perception, reinforcement learning, state estimation, and human-robot interaction projects.
 
-M.S. in Robotics Engineering from the University of Michigan-Dearborn. I build robotics systems using ROS 2, MuJoCo, Python, C++, and simulation-driven development workflows.
+Live site: https://my-portfolio-one-eta-83.vercel.app/
 
-## Technical Interests
+## Overview
 
-- Robotics software development with ROS and ROS 2
-- Autonomous navigation and motion control
-- Reinforcement learning for robotics
-- Robot perception and sensor fusion
-- Probabilistic localization and state estimation
-- Human-robot interaction and multimodal robot behavior
-- Simulation-driven robotics development with MuJoCo and Gazebo
+This portfolio is built as a responsive React/Vite website with a dark technical visual style. It highlights selected robotics projects, technical skills, resume access, and contact links for recruiters and robotics teams.
 
-## Featured Projects
+## Tech Stack
 
-### ROS 2 PCL Perception Suite
+- React
+- Vite
+- Tailwind CSS
+- JavaScript
+- Vercel deployment
 
-Modular ROS 2 perception pipeline for real-time PointCloud2 processing, clustering, visualization, and lightweight object tracking.
+## Project Structure
 
-- Built a ROS 2 Humble pipeline for point cloud preprocessing and ground segmentation
-- Implemented Euclidean clustering with 3D bounding boxes in RViz2
-- Added centroid-based tracking with persistent object IDs
-- Included runtime performance logging, YAML configuration, and unified launch support
+```text
+my-portfolio/
+├── public/
+│   ├── project-images/
+│   ├── projects/
+│   ├── Resume.pdf
+│   └── thesis.pdf
+├── src/
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── package.json
+└── vite.config.js
+```
 
-Tech stack: ROS 2 Humble, C++, Python, PCL, RViz2, Ubuntu 22.04
+## Local Development
 
-Repository: https://github.com/ninad164/ros2-pcl-perception-suite
+Install dependencies:
 
-### Measuring Trust in Human-Robot Interaction
+```bash
+npm install
+```
 
-Master's thesis project focused on multimodal conversational robotics and trust-aware HRI systems.
+Start the development server:
 
-- Built a ROS-based multimodal companion robot on Clearpath JACKAL
-- Integrated Whisper, OAK-D Pro, DeepSpectrumLite, and local LLM inference
-- Conducted an IRB-approved HRI study with 60 participants
-- Evaluated trust, adaptability, and emotion recognition in human-robot interaction
+```bash
+npm run dev
+```
 
-Tech stack: ROS, JACKAL, OAK-D Pro, HRI, Python, LLMs
+Build for production:
 
-### MuJoCo RL Navigation
+```bash
+npm run build
+```
 
-Reinforcement learning project for autonomous robotic navigation in simulation.
+Preview the production build locally:
 
-- Built a custom MuJoCo navigation environment
-- Trained PPO agents for obstacle avoidance and goal-directed navigation
-- Compared learned policy performance against a baseline controller
-- Evaluated success rate, collision rate, and trajectory efficiency
+```bash
+npm run preview
+```
 
-Tech stack: MuJoCo, Reinforcement Learning, PPO, Gymnasium, Stable-Baselines3, Python
+Run lint checks:
 
-Repository: https://github.com/ninad164/mujoco-rl-navigation
+```bash
+npm run lint
+```
 
-### EKF Robotic Localization
+## Content Updates
 
-Extended Kalman Filter based robotic localization project for probabilistic state estimation under noisy motion and sensor conditions.
+Most portfolio content is managed in `src/App.jsx`, including:
 
-- Implemented a nonlinear prediction-update localization pipeline
-- Performed robot trajectory estimation under uncertainty
-- Demonstrated sensor fusion and motion modeling concepts
-- Evaluated localization robustness in simulation
+- Hero and intro copy
+- About section
+- Project card data
+- Skills section
+- Contact links
 
-Tech stack: EKF, State Estimation, Sensor Fusion, Robotics, Python, C++
-
-## Technical Stack
-
-Robotics: ROS, ROS 2, Gazebo, RViz, MuJoCo, MoveIt 2
-
-Perception: OpenCV, Point Cloud Library (PCL)
-
-AI / ML: PyTorch, Reinforcement Learning, Computer Vision, LLMs
-
-Programming: Python, C++, MATLAB
-
-Robotics Concepts: SLAM, Localization, Sensor Fusion, Robot Navigation, EKF
-
-## Connect
-
-Portfolio: https://my-portfolio-one-eta-83.vercel.app/
-
-LinkedIn: https://www.linkedin.com/in/ninadalurkar
-
-Phone: +1-248-990-5119
+Static files such as resumes, PDFs, screenshots, GIFs, and videos should be placed under `public/` so they can be referenced from the site with root-relative paths.
