@@ -1,4 +1,65 @@
 export default function RoboticsPortfolio() {
+  const experiences = [
+    {
+      role: "Robotics Software Engineer",
+      company: "Boston Dynamics",
+      duration: "Sep 2025 - Present | United States",
+      summary:
+        "Building autonomy and robotics software for real-time locomotion, state estimation, planning, and perception on production robotic systems.",
+      bullets: [
+        "Developed real-time quadruped locomotion control systems in ROS 2 and C++, improving control-loop determinism and reducing runtime jitter.",
+        "Built multi-sensor state estimation pipelines fusing IMU, force-torque, and stereo vision data with EKF and factor graph optimization.",
+        "Implemented motion planning and trajectory optimization systems with OMPL and MPC-based controllers for autonomous navigation.",
+        "Created terrain segmentation and obstacle detection pipelines using OpenCV, PyTorch, and real-time robotics inference workflows.",
+        "Developed simulation-to-real validation workflows in Gazebo and Isaac Sim to harden autonomy behavior before deployment.",
+        "Integrated ROS 2 lifecycle nodes, BT.CPP behavior trees, and modular autonomy services for reliable robotic system orchestration.",
+      ],
+      tech: [
+        "ROS 2",
+        "C++",
+        "EKF",
+        "MPC",
+        "OMPL",
+        "OpenCV",
+        "PyTorch",
+        "Isaac Sim",
+        "Gazebo",
+        "Docker",
+        "TensorRT",
+        "BT.CPP",
+      ],
+    },
+    {
+      role: "Robotics Software Engineer",
+      company: "Honeywell",
+      duration: "Jan 2021 - Jul 2024 | India",
+      summary:
+        "Delivered autonomy infrastructure for industrial robotics with an emphasis on navigation, estimation, simulation, and deployable perception pipelines.",
+      bullets: [
+        "Architected ROS 2-based autonomous navigation systems for industrial robotics using DDS middleware and modular software design.",
+        "Developed multi-modal SLAM and localization pipelines integrating LiDAR, stereo vision, and IMU data with EKF and graph optimization.",
+        "Built CI/CD robotics testing workflows with Docker, GitLab CI, and Gazebo-based simulation infrastructure.",
+        "Implemented real-time sensor fusion and state estimation systems for long-duration autonomous robotic operations.",
+        "Optimized embedded AI perception pipelines with CUDA, TensorRT, and PyTorch acceleration for production-style inference.",
+        "Developed motion planning systems with MoveIt, OMPL, and ROS 2 Control for constrained robotic environments.",
+      ],
+      tech: [
+        "ROS 2",
+        "SLAM",
+        "EKF",
+        "MoveIt",
+        "OMPL",
+        "CUDA",
+        "TensorRT",
+        "Gazebo",
+        "Docker",
+        "GitLab CI",
+        "Python",
+        "C++",
+      ],
+    },
+  ];
+
   const projects = [
     {
       title: "Measuring Trust in Human–Robot Interaction",
@@ -187,6 +248,77 @@ export default function RoboticsPortfolio() {
               fusion, and multimodal human-robot interaction.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section id="experience" className="mx-auto max-w-6xl px-6 py-8 md:px-10 md:py-12">
+        <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
+              Experience
+            </p>
+            <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
+              Robotics Software Roles
+            </h2>
+          </div>
+          <p className="max-w-2xl text-sm leading-7 text-slate-400 md:text-base">
+            Recruiter-ready highlights across autonomy, perception, planning, state estimation,
+            and simulation for production-oriented robotics teams.
+          </p>
+        </div>
+
+        <div className="relative space-y-6 before:absolute before:bottom-6 before:left-[1.05rem] before:top-6 before:hidden before:w-px before:bg-gradient-to-b before:from-cyan-400/50 before:via-slate-700 before:to-transparent md:before:block">
+          {experiences.map((experience) => (
+            <article
+              key={`${experience.company}-${experience.duration}`}
+              className="group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/95 p-6 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-cyan-950/20 md:ml-10"
+            >
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,0.16),transparent_38%)] opacity-70 transition duration-300 group-hover:opacity-100" />
+              <div className="absolute left-[-2.15rem] top-8 hidden h-4 w-4 rounded-full border border-cyan-300/70 bg-slate-950 shadow-[0_0_18px_rgba(34,211,238,0.35)] md:block" />
+
+              <div className="relative">
+                <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                  <div className="max-w-3xl">
+                    <p className="text-sm font-medium uppercase tracking-[0.22em] text-cyan-300">
+                      {experience.role}
+                    </p>
+                    <h3 className="mt-2 text-2xl font-semibold text-white md:text-[1.75rem]">
+                      {experience.company}
+                    </h3>
+                    <p className="mt-3 max-w-2xl leading-7 text-slate-300">
+                      {experience.summary}
+                    </p>
+                  </div>
+
+                  <div className="shrink-0 rounded-2xl border border-slate-700 bg-slate-950/70 px-4 py-3 text-sm font-medium text-slate-200">
+                    {experience.duration}
+                  </div>
+                </div>
+
+                <ul className="mt-6 grid gap-3 text-sm leading-7 text-slate-300 md:grid-cols-2">
+                  {experience.bullets.map((bullet) => (
+                    <li
+                      key={bullet}
+                      className="rounded-2xl border border-slate-800/80 bg-slate-950/40 px-4 py-3 transition duration-300 group-hover:border-slate-700"
+                    >
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {experience.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full border border-slate-700 bg-slate-950/60 px-3 py-1 text-xs font-medium text-slate-300 transition duration-300 group-hover:border-cyan-400/30 group-hover:text-slate-200"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
