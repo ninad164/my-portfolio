@@ -7,12 +7,12 @@ export default function RoboticsPortfolio() {
       summary:
         "Building autonomy and robotics software for real-time locomotion, state estimation, planning, and perception on production robotic systems.",
       bullets: [
-        "Developed real-time quadruped locomotion control systems in ROS 2 and C++, improving control-loop determinism and reducing runtime jitter.",
-        "Built multi-sensor state estimation pipelines fusing IMU, force-torque, and stereo vision data with EKF and factor graph optimization.",
-        "Implemented motion planning and trajectory optimization systems with OMPL and MPC-based controllers for autonomous navigation.",
-        "Created terrain segmentation and obstacle detection pipelines using OpenCV, PyTorch, and real-time robotics inference workflows.",
-        "Developed simulation-to-real validation workflows in Gazebo and Isaac Sim to harden autonomy behavior before deployment.",
-        "Integrated ROS 2 lifecycle nodes, BT.CPP behavior trees, and modular autonomy services for reliable robotic system orchestration.",
+        "Built ROS 2/C++ locomotion control for quadruped systems.",
+        "Developed multi-sensor state estimation with EKF and factor graphs.",
+        "Implemented motion planning with OMPL and MPC controllers.",
+        "Built terrain segmentation and obstacle detection pipelines.",
+        "Created sim-to-real validation workflows in Gazebo and Isaac Sim.",
+        "Integrated lifecycle nodes and BT.CPP autonomy orchestration.",
       ],
       tech: [
         "ROS 2",
@@ -36,12 +36,12 @@ export default function RoboticsPortfolio() {
       summary:
         "Delivered autonomy infrastructure for industrial robotics with an emphasis on navigation, estimation, simulation, and deployable perception pipelines.",
       bullets: [
-        "Architected ROS 2-based autonomous navigation systems for industrial robotics using DDS middleware and modular software design.",
-        "Developed multi-modal SLAM and localization pipelines integrating LiDAR, stereo vision, and IMU data with EKF and graph optimization.",
-        "Built CI/CD robotics testing workflows with Docker, GitLab CI, and Gazebo-based simulation infrastructure.",
-        "Implemented real-time sensor fusion and state estimation systems for long-duration autonomous robotic operations.",
-        "Optimized embedded AI perception pipelines with CUDA, TensorRT, and PyTorch acceleration for production-style inference.",
-        "Developed motion planning systems with MoveIt, OMPL, and ROS 2 Control for constrained robotic environments.",
+        "Architected ROS 2 navigation systems for industrial robotics.",
+        "Built multi-modal SLAM and localization pipelines.",
+        "Created CI/CD robotics testing with Docker and Gazebo.",
+        "Implemented real-time sensor fusion and state estimation.",
+        "Optimized embedded AI perception with CUDA and TensorRT.",
+        "Developed motion planning with MoveIt, OMPL, and ROS 2 Control.",
       ],
       tech: [
         "ROS 2",
@@ -295,12 +295,13 @@ export default function RoboticsPortfolio() {
                   </div>
                 </div>
 
-                <ul className="mt-6 grid gap-3 text-sm leading-7 text-slate-300 md:grid-cols-2">
+                <ul className="mt-6 grid gap-x-6 gap-y-3 text-sm leading-7 text-slate-300 md:grid-cols-2">
                   {experience.bullets.map((bullet) => (
                     <li
                       key={bullet}
-                      className="rounded-2xl border border-slate-800/80 bg-slate-950/40 px-4 py-3 transition duration-300 group-hover:border-slate-700"
+                      className="relative pl-5 transition duration-300"
                     >
+                      <span className="absolute left-0 top-[0.7rem] h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_10px_rgba(103,232,249,0.35)]" />
                       {bullet}
                     </li>
                   ))}
