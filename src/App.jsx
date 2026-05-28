@@ -500,16 +500,16 @@ export default function RoboticsPortfolio() {
                 <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
                   {group.title}
                 </h3>
-                <div className="mt-3 flex flex-wrap gap-2.5">
-                  {group.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full border border-slate-700 bg-slate-900/80 px-3 py-1.5 text-sm text-slate-200"
-                    >
-                      {skill}
+                <p className="mt-3 text-sm leading-7 text-slate-200 md:text-[0.95rem]">
+                  {group.skills.map((skill, index) => (
+                    <span key={skill}>
+                      {index > 0 && (
+                        <span className="mx-2 text-cyan-300/80">&bull;</span>
+                      )}
+                      <span>{skill}</span>
                     </span>
                   ))}
-                </div>
+                </p>
               </div>
             ))}
           </div>
