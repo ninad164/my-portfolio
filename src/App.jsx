@@ -138,24 +138,73 @@ export default function RoboticsPortfolio() {
 
   const skillGroups = [
     {
-      title: "Robotics",
-      skills: ["ROS", "ROS 2", "Gazebo", "RViz", "MuJoCo", "MoveIt 2"],
+      title: "Robotics & Autonomy",
+      skills: [
+        "ROS 2",
+        "Nav2",
+        "Lifecycle Nodes",
+        "DDS/FastDDS",
+        "MoveIt",
+        "OMPL",
+        "Behavior Trees (BT.CPP)",
+        "SLAM (LiDAR/Visual)",
+        "Trajectory Optimization (MPC, RRT*, CHOMP)",
+        "Multi-Robot Systems",
+      ],
     },
     {
-      title: "Autonomy & Estimation",
-      skills: ["Navigation", "Sensor Fusion", "EKF", "Localization", "Motion Control", "PCL"],
+      title: "Perception & AI",
+      skills: [
+        "Computer Vision",
+        "OpenCV",
+        "Deep Learning",
+        "PyTorch",
+        "TensorFlow",
+        "Object Detection",
+        "YOLO-style Models",
+        "Visual SLAM",
+        "3D Mapping",
+        "TensorRT",
+        "ONNX Runtime",
+      ],
     },
     {
-      title: "AI/ML",
-      skills: ["Reinforcement Learning", "PPO", "Computer Vision", "Emotion Recognition", "LLM-based Interaction"],
+      title: "Control & Embedded Systems",
+      skills: [
+        "C/C++",
+        "Python",
+        "Real-time Control Systems",
+        "Sensor Fusion (EKF/UKF)",
+        "ARM Cortex",
+        "FPGA Integration",
+        "FreeRTOS",
+        "Motor Control Systems",
+      ],
     },
     {
-      title: "Programming",
-      skills: ["Python", "C++", "MATLAB", "Git", "Linux"],
+      title: "Simulation & Robotics Testing",
+      skills: [
+        "Gazebo",
+        "Isaac Sim",
+        "NVIDIA Omniverse",
+        "HIL/SIL Testing",
+        "Digital Twins",
+      ],
     },
     {
-      title: "Hardware / Sensors",
-      skills: ["Clearpath JACKAL", "OAK-D Pro", "ReSpeaker Mic Array"],
+      title: "Infrastructure & Tools",
+      skills: [
+        "Docker",
+        "Kubernetes light",
+        "Git",
+        "CI/CD",
+        "GitLab",
+        "GitHub Actions",
+        "CUDA",
+        "MATLAB",
+        "Agile Robotics Development",
+        "Edge Deployment Systems",
+      ],
     },
   ];
 
@@ -166,17 +215,19 @@ export default function RoboticsPortfolio() {
           <div className="grid gap-10 md:grid-cols-[1.3fr_0.7fr] md:items-center">
             <div>
               <p className="mb-4 inline-block rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1 text-sm tracking-wide text-cyan-300">
-                Robotics Software • Autonomy • AI Robotics
+                Robotics Software Engineer • Autonomy • ROS 2 • AI Robotics
               </p>
               <h1 className="text-4xl font-bold tracking-tight text-white md:text-6xl">
                 Ninad Alurkar
               </h1>
               <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-                Robotics Engineer focused on autonomous systems, robot perception, reinforcement learning, and human-robot interaction.
+                Robotics Software Engineer specializing in autonomous systems, real-time robotics software, perception, sensor fusion, and motion planning.
               </p>
               <p className="mt-6 max-w-2xl text-base leading-7 text-slate-400">
-                I build ROS and ROS 2 software for perception-driven autonomy, sensor fusion,
-                probabilistic localization, simulation, and intelligent robot behavior.
+                I build ROS 2-based robotics systems that connect perception, planning, state
+                estimation, and control for reliable autonomy. My work spans quadruped
+                locomotion, industrial robotics, reinforcement learning navigation, EKF-based
+                localization, and simulation-to-real validation.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -208,20 +259,22 @@ export default function RoboticsPortfolio() {
                 <div>
                   <p className="text-sm uppercase tracking-[0.2em] text-slate-500">Current Focus</p>
                   <p className="mt-2 text-lg font-semibold text-white">
-                    Autonomous navigation, perception, and AI-enabled robotics
+                    Real-time autonomy, robotic perception, state estimation, and motion planning
                   </p>
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-[0.2em] text-slate-500">Background</p>
                   <p className="mt-2 text-slate-300">
-                    Master's graduate with hands-on experience across ROS/ROS 2,
-                    MuJoCo and Gazebo simulation, localization, perception, and HRI systems.
+                    Robotics Software Engineer with experience developing ROS 2 autonomy
+                    pipelines, perception systems, sensor fusion, simulation workflows, and
+                    embedded robotics software across industrial and mobile robotics applications.
                   </p>
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-[0.2em] text-slate-500">Looking For</p>
                   <p className="mt-2 text-slate-300">
-                    Robotics software, autonomy, AI robotics, and research engineering roles.
+                    Robotics software, autonomy, perception, motion planning, state estimation,
+                    and AI robotics roles.
                   </p>
                 </div>
               </div>
@@ -237,22 +290,23 @@ export default function RoboticsPortfolio() {
               About
             </p>
             <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
-              Building robotics software for perception, autonomy, and interaction
+              Building reliable robotics software for autonomy, perception, and intelligent control
             </h2>
           </div>
           <div className="rounded-3xl border border-slate-800 bg-slate-900 p-6 text-slate-300 shadow-xl shadow-black/20">
             <p className="leading-8">
-              I build robotics software that connects perception, planning, state estimation,
-              and intelligent interaction. My work spans ROS/ROS 2 systems, simulation-based
-              autonomy, reinforcement learning navigation, probabilistic localization, sensor
-              fusion, and multimodal human-robot interaction.
+              I develop robotics software across the autonomy stack, from perception and sensor
+              fusion to planning, localization, and control. My experience includes ROS 2
+              systems, real-time robotics pipelines, EKF-based state estimation, motion
+              planning, reinforcement learning navigation, and simulation-driven validation
+              using Gazebo, MuJoCo, and Isaac Sim.
             </p>
           </div>
         </div>
       </section>
 
       <section id="experience" className="mx-auto max-w-6xl px-6 py-8 md:px-10 md:py-12">
-        <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div className="mb-8">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
               Experience
@@ -261,10 +315,6 @@ export default function RoboticsPortfolio() {
               Robotics Software Roles
             </h2>
           </div>
-          <p className="max-w-2xl text-sm leading-7 text-slate-400 md:text-base">
-            Recruiter-ready highlights across autonomy, perception, planning, state estimation,
-            and simulation for production-oriented robotics teams.
-          </p>
         </div>
 
         <div className="relative space-y-6 before:absolute before:bottom-6 before:left-[1.05rem] before:top-6 before:hidden before:w-px before:bg-gradient-to-b before:from-cyan-400/50 before:via-slate-700 before:to-transparent md:before:block">
@@ -439,19 +489,22 @@ export default function RoboticsPortfolio() {
             Skills
           </p>
           <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
-            Robotics Software Stack
+            Technical Skills
           </h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
             {skillGroups.map((group) => (
-              <div key={group.title}>
+              <div
+                key={group.title}
+                className="rounded-2xl border border-slate-800 bg-slate-950/40 p-5"
+              >
                 <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
                   {group.title}
                 </h3>
-                <div className="mt-3 flex flex-wrap gap-3">
+                <div className="mt-3 flex flex-wrap gap-2.5">
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-2xl border border-slate-700 px-4 py-2 text-sm text-slate-200"
+                      className="rounded-full border border-slate-700 bg-slate-900/80 px-3 py-1.5 text-sm text-slate-200"
                     >
                       {skill}
                     </span>
